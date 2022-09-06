@@ -7,7 +7,7 @@ import {
   Person,
   Settings,
   Storefront,
-} from "@mui/icons-material";
+} from '@mui/icons-material';
 import {
   Box,
   List,
@@ -16,13 +16,13 @@ import {
   ListItemIcon,
   ListItemText,
   Switch,
-} from "@mui/material";
-import React from "react";
+} from '@mui/material';
+import React from 'react';
 
-const Sidebar = ({mode,setMode}) => {
+const Sidebar = ({ mode, setMode }) => {
   return (
-    <Box flex={1} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
-      <Box position="fixed">
+    <Box flex={1} p={2} sx={{ display: { xs: 'none', sm: 'block' } }}>
+      <Box position="sticky">
         <List>
           <ListItem disablePadding>
             <ListItemButton component="a" href="#home">
@@ -85,7 +85,9 @@ const Sidebar = ({mode,setMode}) => {
               <ListItemIcon>
                 <ModeNight />
               </ListItemIcon>
-              <Switch onChange={e=>setMode(mode === "light" ? "dark" : "light")}/>
+              <Switch
+                onChange={(e) => setMode(mode === 'light' ? 'dark' : 'light')}
+              />
             </ListItemButton>
           </ListItem>
         </List>
